@@ -69,3 +69,23 @@ def sigmoid(array):
     return 1/(1+np.exp(-(array)))
 a = np.arange(10)
 print(sigmoid(a))
+
+#Numpy problems
+#Q-1: Create a random 3x4 matrix with value between 0-100. And perform below tasks
+#i. Sort this matrix. np.sort()
+#ii. Sort this matrix based on values in 2nd column.
+#iii. Sort this matrix based on max value in each row.
+#iv. Sort based on elements value.
+
+arr8 = np.random.randint(0,100,(3,4))
+print(arr8)
+#1
+print(np.sort(arr8))
+#2
+print(arr8[arr8[:,1].argsort()])
+#3
+print("3")
+print(np.array(sorted(arr8, key = lambda x: max(x))))
+#4
+print("4")
+print(np.sort(arr8, axis = None).reshape(4,3))
